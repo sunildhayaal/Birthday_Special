@@ -24,29 +24,32 @@
         .font-script {
             font-family: 'Dancing Script', cursive;
         }
-        /* Style for the confetti canvas to ensure it covers the screen */
+        /* Style for the confetti canvas */
         #confetti-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 999;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999;
         }
-        /* This class prevents images from breaking across columns in the new layout */
+        /* Prevents items breaking across columns */
         .avoid-break {
             break-inside: avoid;
         }
-        /* Styles for the new fade-in animation on scroll */
+        /* Fade-in animation on scroll */
         .fade-in-element {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
         .fade-in-element.is-visible {
-            opacity: 1;
-            transform: translateY(0);
+            opacity: 1; transform: translateY(0);
+        }
+        /* Shimmering animation for the title */
+        .shimmer {
+            background: linear-gradient(90deg, #fce7f3, #fb7185, #fce7f3);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 5s infinite linear;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
         }
     </style>
 </head>
@@ -66,9 +69,9 @@
 
     <div class="container mx-auto px-4 py-12">
 
-        <!-- Header Section -->
+        <!-- Header Section with new shimmer effect -->
         <header class="text-center mb-12">
-            <h1 class="font-script text-6xl md:text-8xl text-rose-500">Happy Birthday, My Love!</h1>
+            <h1 class="font-script text-6xl md:text-8xl text-rose-500 shimmer">Happy Birthday, My Love!</h1>
             <p class="text-gray-600 mt-4 text-lg">A journey through our beautiful moments together.</p>
         </header>
 
@@ -78,6 +81,17 @@
             <p class="text-gray-700 leading-relaxed">
                 My dearest wife, on your special day, I wanted to do more than just say 'Happy Birthday'. I wanted to show you a glimpse of the beautiful world you've created for me. Each of these photos is a small testament to the joy, laughter, and love you bring into my life every single day. Thank you for being my everything. I love you more than words can express.
             </p>
+        </section>
+        
+        <!-- Reasons I Love You Section -->
+        <section class="max-w-2xl mx-auto mb-16 text-center">
+             <h2 class="font-script text-5xl text-rose-500 mb-6">A Few Reasons Why I Love You...</h2>
+             <div id="reasons-box" class="bg-white/60 backdrop-blur-md p-6 rounded-2xl shadow-lg min-h-[80px] flex items-center justify-center mb-6">
+                <p id="reason-text" class="text-gray-700 text-xl italic">Click the button to see...</p>
+             </div>
+             <button id="reason-btn" class="bg-rose-500 text-white font-bold py-3 px-8 rounded-full hover:bg-rose-600 transition-all duration-300 transform hover:scale-105">
+                Tell me a reason
+             </button>
         </section>
 
         <!-- Masonry Photo Gallery -->
@@ -690,27 +704,85 @@
                 <div class="p-4"><p class="text-gray-700">Matching with my main squeeze! The flowers are beautiful, but not as beautiful as the woman holding them. Love our fun times together.</p></div>
             </div>
 
-
         </main>
         
-        <!-- Footer Section -->
-        <footer class="text-center mt-12">
+        <!-- Footer Section with Digital Signature -->
+        <footer class="text-center mt-20">
              <p class="text-gray-700 text-xl">Wishing you the happiest of birthdays, today and always.</p>
-             <p class="text-gray-500 mt-2">With all my love.</p>
+             <div class="mt-4">
+                <p class="font-script text-3xl text-rose-500">With all my love, forever and always,</p>
+                <p class="font-script text-4xl text-rose-600 mt-1">Sunil</p>
+             </div>
         </footer>
 
     </div>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 hidden z-[1000]">
-        <div id="lightbox-content" class="relative bg-white rounded-lg max-w-4xl max-h-full overflow-auto">
-            <button id="close-lightbox" class="absolute top-2 right-4 text-white bg-rose-500 rounded-full w-8 h-8 text-2xl font-bold flex items-center justify-center">&times;</button>
-            <div id="lightbox-media" class="p-4"></div>
-            <p id="lightbox-caption" class="p-4 pt-0 text-gray-700 text-center"></p>
+        <div id="lightbox-content" class="relative bg-white rounded-lg max-w-4xl max-h-[90vh] flex flex-col">
+            <button id="close-lightbox" class="absolute -top-4 -right-4 text-white bg-rose-500 rounded-full w-10 h-10 text-2xl font-bold flex items-center justify-center z-20">&times;</button>
+            <div class="relative flex-grow flex items-center justify-center">
+                 <button id="prev-btn" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-black/50 transition-colors z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                 </button>
+                 <div id="lightbox-media" class="p-4 flex-grow flex items-center justify-center"></div>
+                 <button id="next-btn" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-black/50 transition-colors z-10">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                 </button>
+            </div>
+            <p id="lightbox-caption" class="p-4 pt-2 text-gray-700 text-center flex-shrink-0"></p>
         </div>
     </div>
 
     <script>
+        // --- START OF MUSIC SCRIPT ---
+        const audioPlayer = document.getElementById('background-music');
+        const musicControlButton = document.getElementById('music-control-btn');
+        const playIcon = document.getElementById('play-icon');
+        const pauseIcon = document.getElementById('pause-icon');
+
+        const playlist = [
+            'Music/Kitna Pyaara Tujhe Rabne Banaya Raja Hindustani.mp3',
+            'Music/Mera Dil Bhi Kitna Pagal Hai.mp3'
+        ];
+        let currentTrack = 0;
+        let musicStarted = false;
+
+        function playNextTrack() {
+            currentTrack = (currentTrack + 1) % playlist.length;
+            audioPlayer.src = playlist[currentTrack];
+            audioPlayer.play();
+        }
+
+        audioPlayer.addEventListener('ended', playNextTrack);
+
+        function startMusic() {
+            if (musicStarted) return;
+            musicStarted = true;
+            audioPlayer.src = playlist[currentTrack];
+            audioPlayer.play().then(() => {
+                musicControlButton.classList.remove('hidden');
+            }).catch(error => {
+                console.log("Autoplay was prevented. User interaction is needed.");
+            });
+        }
+        
+        document.body.addEventListener('click', startMusic, { once: true });
+
+        musicControlButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+            } else {
+                audioPlayer.pause();
+                pauseIcon.classList.add('hidden');
+                playIcon.classList.remove('hidden');
+            }
+        });
+        // --- END OF MUSIC SCRIPT ---
+
+
         // Let's make it rain confetti when the page loads!
         window.onload = () => {
             const confettiCanvas = document.getElementById('confetti-canvas');
@@ -738,44 +810,67 @@
             }, 250);
         };
 
-        // Lightbox functionality
+        // --- START OF LIGHTBOX & SLIDESHOW SCRIPT ---
         const lightbox = document.getElementById('lightbox');
         const lightboxMedia = document.getElementById('lightbox-media');
         const lightboxCaption = document.getElementById('lightbox-caption');
         const closeLightboxBtn = document.getElementById('close-lightbox');
-        const galleryItems = document.querySelectorAll('main > div');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
 
-        galleryItems.forEach(item => {
+        const galleryItems = Array.from(document.querySelectorAll('main > div.avoid-break'));
+        let currentItemIndex = 0;
+
+        function showItem(index) {
+            const item = galleryItems[index];
+            const type = item.dataset.type;
+            const caption = item.querySelector('p').textContent;
+
+            lightboxMedia.innerHTML = ''; 
+
+            if (type === 'image') {
+                const img = item.querySelector('img');
+                const newImg = document.createElement('img');
+                newImg.src = img.src;
+                newImg.className = 'max-w-full max-h-[70vh] mx-auto rounded';
+                lightboxMedia.appendChild(newImg);
+            } else if (type === 'video') {
+                const videoSource = item.querySelector('video source');
+                const newVideo = document.createElement('video');
+                newVideo.src = videoSource.src;
+                newVideo.controls = true;
+                newVideo.autoplay = true;
+                newVideo.className = 'max-w-full max-h-[70vh] mx-auto rounded';
+                lightboxMedia.appendChild(newVideo);
+            }
+
+            lightboxCaption.textContent = caption;
+            currentItemIndex = index;
+        }
+
+        galleryItems.forEach((item, index) => {
             item.addEventListener('click', () => {
-                const type = item.dataset.type;
-                const caption = item.querySelector('p').textContent;
-                
-                lightboxMedia.innerHTML = ''; // Clear previous content
-                
-                if (type === 'image') {
-                    const img = item.querySelector('img');
-                    const newImg = document.createElement('img');
-                    newImg.src = img.src;
-                    newImg.className = 'max-w-full max-h-[75vh] mx-auto rounded';
-                    lightboxMedia.appendChild(newImg);
-                } else if (type === 'video') {
-                    const videoSource = item.querySelector('video source');
-                    const newVideo = document.createElement('video');
-                    newVideo.src = videoSource.src;
-                    newVideo.controls = true;
-                    newVideo.autoplay = true;
-                    newVideo.className = 'max-w-full max-h-[75vh] mx-auto rounded';
-                    lightboxMedia.appendChild(newVideo);
-                }
-
-                lightboxCaption.textContent = caption;
+                showItem(index);
                 lightbox.classList.remove('hidden');
             });
         });
 
+        function showNextItem() {
+            const nextIndex = (currentItemIndex + 1) % galleryItems.length;
+            showItem(nextIndex);
+        }
+
+        function showPrevItem() {
+            const prevIndex = (currentItemIndex - 1 + galleryItems.length) % galleryItems.length;
+            showItem(prevIndex);
+        }
+
+        nextBtn.addEventListener('click', showNextItem);
+        prevBtn.addEventListener('click', showPrevItem);
+
         function closeLightbox() {
             lightbox.classList.add('hidden');
-            lightboxMedia.innerHTML = ''; // Stop video playback
+            lightboxMedia.innerHTML = '';
         }
 
         closeLightboxBtn.addEventListener('click', closeLightbox);
@@ -785,12 +880,46 @@
             }
         });
 
-        // Close with Escape key
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
-                closeLightbox();
+            if (!lightbox.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') showNextItem();
+                if (e.key === 'ArrowLeft') showPrevItem();
             }
         });
+        // --- END OF LIGHTBOX & SLIDESHOW SCRIPT ---
+        
+
+        // --- START OF REASONS I LOVE YOU SCRIPT ---
+        const reasonBtn = document.getElementById('reason-btn');
+        const reasonText = document.getElementById('reason-text');
+        
+        // !!! IMPORTANT: REPLACE THESE WITH YOUR OWN REASONS !!!
+        const reasons = [
+            "Because you make me laugh like no one else can.",
+            "Because of the way you always know how to comfort me.",
+            "Because you're the most intelligent person I know.",
+            "Because you inspire me to be a better person every day.",
+            "Because I love our adventures together, big or small.",
+            "Because you have the kindest heart.",
+            "Because you always see the best in people.",
+            "Because you make our house feel like a home.",
+            "Because of your beautiful, infectious smile.",
+            "Because you are my best friend and my true love."
+        ];
+        let lastReasonIndex = -1;
+
+        reasonBtn.addEventListener('click', () => {
+            let newReasonIndex;
+            do {
+                newReasonIndex = Math.floor(Math.random() * reasons.length);
+            } while (newReasonIndex === lastReasonIndex && reasons.length > 1);
+            
+            reasonText.textContent = reasons[newReasonIndex];
+            lastReasonIndex = newReasonIndex;
+        });
+        // --- END OF REASONS I LOVE YOU SCRIPT ---
+
 
         // Scroll animation functionality
         const observer = new IntersectionObserver((entries) => {

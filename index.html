@@ -1,1 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love!</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for a beautiful script font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- A little library for a fun confetti effect! -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+    <style>
+        /* Applying the custom fonts */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-script {
+            font-family: 'Dancing Script', cursive;
+        }
+        /* Style for the confetti canvas to ensure it covers the screen */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+        /* This class prevents images from breaking across columns in the new layout */
+        .avoid-break {
+            break-inside: avoid;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-rose-100 to-teal-100 min-h-screen">
+
+    <!-- Canvas element for the confetti -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="container mx-auto px-4 py-12">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="font-script text-6xl md:text-8xl text-rose-500">Happy Birthday, My Love!</h1>
+            <p class="text-gray-600 mt-4 text-lg">A journey through our beautiful moments together.</p>
+        </header>
+
+        <!-- Masonry Photo Gallery -->
+        <!-- This layout will create a beautiful staggered "zig-zag" effect -->
+        <main class="columns-1 md:columns-2 lg:columns-4 gap-6 max-w-7xl mx-auto space-y-6">
+            
+            <!-- Videos will autoplay muted. Click the video to see controls and unmute. -->
+
+            <!-- Media Start -->
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (1).jpg" alt="Memory 1" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/ec4899/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Our beautiful beginning. The start of everything.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <video autoplay loop muted playsinline controls class="w-full h-auto object-cover"><source src="Photo/A (1).MP4" type="video/mp4">Your browser does not support videos.</video>
+                <div class="p-4"><p class="text-gray-700">Seeing you so happy in motion... my heart melts every time.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <video autoplay loop muted playsinline controls class="w-full h-auto object-cover"><source src="Photo/A (4).MP4" type="video/mp4">Your browser does not support videos.</video>
+                <div class="p-4"><p class="text-gray-700">I could watch these happy moments on repeat forever.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <video autoplay loop muted playsinline controls class="w-full h-auto object-cover"><source src="Photo/A (5).MP4" type="video/mp4">Your browser does not support videos.</video>
+                <div class="p-4"><p class="text-gray-700">The sound of your laughter is my favorite song.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (208).jpg" alt="Memory 208" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/ec4899/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Your smile is, and always will be, my favorite thing.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (209).jpg" alt="Memory 209" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/8b5cf6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">A perfect day with my perfect person.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (210).jpg" alt="Memory 210" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/22c55e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You make every view a thousand times more beautiful.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (211).jpg" alt="Memory 211" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/3b82f6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So many wonderful adventures with you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (212).jpg" alt="Memory 212" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My life with you is my greatest adventure.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (213).jpg" alt="Memory 213" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/14b8a6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So lucky to be standing next to you in life.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (214).jpg" alt="Memory 214" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/6366f1/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Every single moment with you is a gift.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (215).jpg" alt="Memory 215" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/d946ef/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">The world disappears when I look at you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (216).jpg" alt="Memory 216" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f43f5e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">One of my all-time favorite memories.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (217).JPG" alt="Memory 217" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/84cc16/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">This photo just radiates pure happiness.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (218).JPG" alt="Memory 218" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/10b981/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">A throwback to one of our very best days.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (219).JPG" alt="Memory 219" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/0ea5e9/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Pure, simple, perfect happiness right here.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (220).JPG" alt="Memory 220" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/a855f7/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You are my sunshine on any cloudy day.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (221).jpg" alt="Memory 221" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f87171/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I love this picture of us. So much love.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (222).JPG" alt="Memory 222" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/ec4899/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My beautiful wife. How did I get so lucky?</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (223).JPG" alt="Memory 223" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/8b5cf6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">That magical look in your eyes gets me every time.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (224).JPG" alt="Memory 224" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/22c55e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Another adventure in the books. To many more!</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (225).JPG" alt="Memory 225" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/3b82f6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">This memory warms my soul every time.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (226).JPG" alt="Memory 226" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You make even the simplest moments feel extraordinary.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (227).JPG" alt="Memory 227" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/14b8a6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My rock, my love, my everything.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (228).JPG" alt="Memory 228" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/6366f1/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Every day I love you more than the day before.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (229).JPG" alt="Memory 229" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/d946ef/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">What a fun day this was. Unforgettable.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (230).JPG" alt="Memory 230" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f43f5e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I cherish every single second I get to spend with you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (231).JPG" alt="Memory 231" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/84cc16/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">The world is a better place with you in it.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (232).JPG" alt="Memory 232" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/10b981/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So much love captured in one single photo.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (233).JPG" alt="Memory 233" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/0ea5e9/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You're even more beautiful than this stunning view.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (234).JPG" alt="Memory 234" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/a855f7/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I love you more than words could ever say.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (235).JPG" alt="Memory 235" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f87171/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Thank you for being you. My incredible wife.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (236).JPG" alt="Memory 236" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/ec4899/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Your elegance and grace are simply unmatched.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (237).JPG" alt="Memory 237" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/8b5cf6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">To many more years of laughter and love like this.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (238).JPG" alt="Memory 238" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/22c55e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Lost in the moment, and so happy to be lost with you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (239).JPG" alt="Memory 239" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/3b82f6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My heart still skips a beat whenever I look at you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (240).JPG" alt="Memory 240" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Building our beautiful life, one happy memory at a time.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (241).JPG" alt="Memory 241" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/14b8a6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">A perfect day with my perfect wife. I love you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (242).JPG" alt="Memory 242" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/6366f1/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My favorite person in my favorite place.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (243).JPG" alt="Memory 243" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/d946ef/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Soaking in the moment. I cherish these quiet times together.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (244).JPG" alt="Memory 244" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f43f5e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">What a perfect day this was. Just filled with laughter.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (245).JPG" alt="Memory 245" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/84cc16/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Stunning. You always manage to take my breath away.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (246).JPG" alt="Memory 246" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/10b981/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">This smile is the reason for my own. Every day.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (247).JPG" alt="Memory 247" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/0ea5e9/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You are the most beautiful person, both inside and out.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (248).JPG" alt="Memory 248" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/a855f7/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I love exploring the world with you right by my side.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (249).JPG" alt="Memory 249" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f87171/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Another chapter in our amazing, beautiful story.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (250).JPG" alt="Memory 250" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/ec4899/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I am forever grateful for all of our moments together.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (251).JPG" alt="Memory 251" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/8b5cf6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My forever and always. This picture says it all perfectly.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (252).JPG" alt="Memory 252" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/22c55e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My heart belongs to you, today and every day.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (253).JPG" alt="Memory 253" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/3b82f6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You make my world so much brighter.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (254).JPG" alt="Memory 254" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">This laugh is my favorite sound in the entire world.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (255).JPG" alt="Memory 255" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/14b8a6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My love for you just keeps growing and growing.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (256).JPG" alt="Memory 256" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/6366f1/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You are my greatest blessing. I love you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (257).JPG" alt="Memory 257" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/d946ef/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Happiness is any moment that I get to spend with you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (258).JPG" alt="Memory 258" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f43f5e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So beautiful. I'm the luckiest person in the world.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (259).JPG" alt="Memory 259" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/84cc16/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I love making you smile. It's my favorite thing to do.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (260).JPG" alt="Memory 260" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/10b981/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Every day with you is a gift I cherish.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (261).JPG" alt="Memory 261" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/0ea5e9/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Looking forward to a lifetime more of this.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (262).JPG" alt="Memory 262" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/a855f7/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Home is wherever I'm with you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (263).JPG" alt="Memory 263" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f87171/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My amazing, wonderful, beautiful wife.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (264).JPG" alt="Memory 264" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/ec4899/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I fall in love with you more and more each day.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (265).JPG" alt="Memory 265" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/8b5cf6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">What a memory. So glad we captured this.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (266).jpg" alt="Memory 266" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/22c55e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You are my heart's forever home.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (267).jpg" alt="Memory 267" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/3b82f6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Life with you is just... perfect.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (268).jpg" alt="Memory 268" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">That look. It melts me every single time.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (269).jpg" alt="Memory 269" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/14b8a6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I love you more than all the stars in the sky.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (270).jpg" alt="Memory 270" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/6366f1/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So much joy in one single photo.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (271).jpg" alt="Memory 271" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/d946ef/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You are my dream come true.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (272).jpg" alt="Memory 272" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f43f5e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">This will always be one of my favorite days.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (273).jpg" alt="Memory 273" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/84cc16/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Look at that gorgeous smile.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (274).jpg" alt="Memory 274" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/10b981/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I love doing life with you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (275).jpg" alt="Memory 275" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/0ea5e9/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My beautiful partner in crime.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (276).jpg" alt="Memory 276" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/a855f7/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You make my heart so incredibly full.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (277).jpg" alt="Memory 277" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f87171/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I'm so proud to call you my wife.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (278).jpg" alt="Memory 278" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/ec4899/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Adventures are better when they are with you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (279).jpg" alt="Memory 279" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/8b5cf6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You are my today and all of my tomorrows.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (280).jpg" alt="Memory 280" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/22c55e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">A throwback to this perfect, sunny day.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (281).jpg" alt="Memory 281" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/3b82f6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You're the best thing that ever happened to me.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (282).jpg" alt="Memory 282" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I love you more than all the coffee in the world.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (283).jpg" alt="Memory 283" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/14b8a6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Still gives me butterflies. Happy birthday, my love.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (284).jpg" alt="Memory 284" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/6366f1/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">This memory makes me smile so wide.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (285).jpg" alt="Memory 285" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/d946ef/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So many pictures, a lifetime of memories to go.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (286).jpg" alt="Memory 286" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f43f5e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I will always choose you. Always.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (287).jpg" alt="Memory 287" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/84cc16/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You are simply perfect.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (288).jpg" alt="Memory 288" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/10b981/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My favorite view is you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (289).jpg" alt="Memory 289" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/0ea5e9/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So beautiful. Inside and out.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (290).jpg" alt="Memory 290" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/a855f7/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So much fun with you, always.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (291).jpg" alt="Memory 291" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f87171/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My heart is and always will be yours.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (292).jpg" alt="Memory 292" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/ec4899/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Couldn't imagine my life without you in it.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (293).jpg" alt="Memory 293" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/8b5cf6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Every love story is beautiful, but ours is my favorite.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (294).jpg" alt="Memory 294" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/22c55e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You are the finest, loveliest, tenderest, and most beautiful person I have ever known.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (295).jpg" alt="Memory 295" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/3b82f6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Still crazy about you after all this time.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (296).jpg" alt="Memory 296" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Here's to another year of us.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (297).jpg" alt="Memory 297" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/14b8a6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You are my happy place.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (298).jpg" alt="Memory 298" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/6366f1/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">This moment was pure magic.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (299).jpg" alt="Memory 299" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/d946ef/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Life with you is a beautiful celebration.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (300).jpg" alt="Memory 300" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f43f5e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Forever isn't long enough with you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (301).jpg" alt="Memory 301" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/84cc16/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I love you more and more every day.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (302).jpg" alt="Memory 302" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/10b981/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You are my sunshine, my only sunshine.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (303).jpg" alt="Memory 303" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/0ea5e9/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So glad I get to spend my life with you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (304).jpg" alt="Memory 304" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/a855f7/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">A million more memories left to create.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (305).jpg" alt="Memory 305" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f87171/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Hundreds of photos, a million reasons I love you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (306).jpg" alt="Memory 306" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/ec4899/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You are the most beautiful person, inside and out.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (307).jpg" alt="Memory 307" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/8b5cf6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I love exploring the world with you by my side.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (308).jpg" alt="Memory 308" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/22c55e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">What a perfect day this was. So much laughter.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (309).jpg" alt="Memory 309" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/3b82f6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Stunning. You always take my breath away.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (310).jpg" alt="Memory 310" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Soaking in the moment. I cherish these quiet times.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (311).jpg" alt="Memory 311" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/14b8a6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">That magical look in your eyes gets me every time.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (312).jpg" alt="Memory 312" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/6366f1/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">The world disappears when I'm with you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (313).jpg" alt="Memory 313" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/d946ef/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Building a lifetime of memories, one smile at a time.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (314).jpg" alt="Memory 314" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f43f5e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My forever and always. This picture says it all.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (315).jpg" alt="Memory 315" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/84cc16/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Another beautiful chapter in our amazing story.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (316).jpg" alt="Memory 316" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/10b981/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My heart still skips a beat when I look at you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (317).jpg" alt="Memory 317" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/0ea5e9/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You make even the simplest moments extraordinary.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (318).jpg" alt="Memory 318" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/a855f7/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Thank you for being you. My incredible wife.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (319).jpg" alt="Memory 319" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f87171/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So much love captured in one photo.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (320).jpg" alt="Memory 320" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/ec4899/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">This memory warms my soul every time I see it.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (321).jpg" alt="Memory 321" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/8b5cf6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Your elegance and grace are unmatched.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (322).jpg" alt="Memory 322" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/22c55e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I love you more than words can say.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (323).jpg" alt="Memory 323" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/3b82f6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">To many more years of laughter and love.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (324).jpg" alt="Memory 324" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My rock, my love, my everything.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (325).jpg" alt="Memory 325" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/14b8a6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I cherish every single second I spend with you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (326).jpg" alt="Memory 326" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/6366f1/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">The world is a better place with you in it.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (327).jpg" alt="Memory 327" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/d946ef/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So much love captured in one single photo.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (328).jpg" alt="Memory 328" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f43f5e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You're even more beautiful than this stunning view.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (329).jpg" alt="Memory 329" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/84cc16/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I love you more than words could ever say.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (330).jpg" alt="Memory 330" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/10b981/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Thank you for being you. My incredible wife.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (331).jpg" alt="Memory 331" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/0ea5e9/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Your elegance and grace are simply unmatched.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (332).jpg" alt="Memory 332" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/a855f7/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">To many more years of laughter and love like this.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (333).jpg" alt="Memory 333" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f87171/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Lost in the moment, and so happy to be lost with you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (334).jpg" alt="Memory 334" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/ec4899/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My heart still skips a beat whenever I look at you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (335).jpg" alt="Memory 335" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/8b5cf6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Building our beautiful life, one happy memory at a time.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (336).jpg" alt="Memory 336" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/22c55e/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">A perfect day with my perfect wife. I love you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (337).jpg" alt="Memory 337" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/3b82f6/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">And the adventure continues...</p></div>
+            </div>
+             <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (338).jpg" alt="Memory 338" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So many memories, so many more to make.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (339).jpg" alt="Memory 339" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Every day is brighter with you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (340).jpg" alt="Memory 340" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You are my everything.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (400).jpg" alt="Memory 400" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">400 beautiful moments, and a love that's even stronger.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (401).jpg" alt="Memory 401" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My love for you knows no bounds.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (402).jpg" alt="Memory 402" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So incredibly beautiful.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (403).jpg" alt="Memory 403" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">That smile lights up my entire world.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (404).jpg" alt="Memory 404" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Just perfect.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (405).jpg" alt="Memory 405" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">A moment of pure bliss.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (406).jpg" alt="Memory 406" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I love this one so much.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (407).jpg" alt="Memory 407" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">So much fun on this day.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (408).jpg" alt="Memory 408" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You are my happy place.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (409).jpg" alt="Memory 409" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">I'm so glad I have you.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (410).jpg" alt="Memory 410" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">You and me, always.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (411).jpg" alt="Memory 411" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">My beautiful wife.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (412).jpg" alt="Memory 412" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">Here's to a lifetime more of memories.</p></div>
+            </div>
+            <div class="avoid-break bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                <img src="Photo/A (413).jpg" alt="Memory 413" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400/f97316/ffffff?text=Image+Missing';">
+                <div class="p-4"><p class="text-gray-700">To the end of this collection, but never to the end of our story. Happy Birthday, my love.</p></div>
+            </div>
+
+
+        </main>
+        
+        <!-- Footer Section -->
+        <footer class="text-center mt-12">
+             <p class="text-gray-700 text-xl">Wishing you the happiest of birthdays, today and always.</p>
+             <p class="text-gray-500 mt-2">With all my love.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Let's make it rain confetti when the page loads!
+        window.onload = () => {
+            // Get the canvas element we added
+            const confettiCanvas = document.getElementById('confetti-canvas');
+            
+            // Create a confetti instance bound to our canvas
+            const myConfetti = confetti.create(confettiCanvas, {
+                resize: true, // Will resize canvas on window resize
+                useWorker: true // Offloads rendering to a web worker for better performance
+            });
+
+            const duration = 5 * 1000;
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 999 };
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            const interval = setInterval(function() {
+                const timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                const particleCount = 50 * (timeLeft / duration);
+                // Use our specific confetti instance to fire the particles
+                myConfetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+                myConfetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+            }, 250);
+        };
+    </script>
+
+</body>
+</html>
 
